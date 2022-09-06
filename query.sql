@@ -30,4 +30,5 @@ WHERE `name` LIKE 'Corso di Laurea Magistrale%';
 SELECT COUNT(*) AS `numero_dipartimenti` FROM `departments`;
 
 -- 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-
+SELECT COUNT(*) AS `insegnanti_senza_numero` FROM `teachers`
+WHERE `phone` IS NULL;
