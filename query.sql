@@ -11,7 +11,6 @@ SELECT * FROM `students`
 WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`,CURRENT_DATE()) > 30
 ORDER BY `date_of_birth` DESC;
 
-
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT * FROM `courses`
 WHERE `period` = 'I semestre'
@@ -23,9 +22,9 @@ WHERE `date` = '2020-06-20'
 AND `hour` > '14:00:00'
 ORDER BY `hour` ASC;
 
-
 -- 6. Selezionare tutti i corsi di laurea magistrale (38)
-
+SELECT * FROM `degrees`
+WHERE `name` LIKE 'Corso di Laurea Magistrale%';
 
 -- 7. Da quanti dipartimenti è composta l'università? (12)
 
